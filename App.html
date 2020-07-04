@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <title>val</title>
+</head>
+<body>
+  <div class="top-header">
+    <div class="container-fluid">
+      <div class="row" id="top">
+        <div class="col-md-1">
+          <img src="" alt="">
+          <img src="" alt="">
+        </div>
+        <div class="col-md-4">
+          <h1> دائرة الموظف - تسجيل متقاعد جديد</h1>
+        </div>
+        <div class="col-md-5">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="">الاحصائيات</a>
+              <p class=""> <i class="fas fa-cogs"></i></p>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">الاستعلام</a>
+              <p> <i class="fas fa-question"></i></p>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">اتصل بنا</a>
+              <p> <i class="fas fa-phone"></i></p>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">الارشفة</a>
+              <p> <i class="fas fa-archive"></i></p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <div class="signup">
+            <span>مرحبا , احمد عبد الهادي</span>
+            <p><i class="fas fa-power-off"></i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end to-header -->
+  <div class="mt-md-5"></div>
+  <div class="container-fluid">
+    <div class="form">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>استمارة الموظف</h3>
+        </div>
+        <div class="col-md-6">
+          <p><i class="fas fa-minus"></i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-md-4"></div>
+  <div class="container">
+    <div class="form-info">
+      <div class="row">
+        <div class="col-md-1">
+          <div class="icons1">
+          </div>
+        </div>
+        <div class="mt-md-3"> </div>
+        <div class="col-md-11">
+          <div class="info">
+            <div class="container-fluid">
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="title-user">
+                    <h2>المعلومات الشخصية للموظف</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-md-3"> </div>
+              <form id="employeeForm" method="POST" novalidate="novalidate" action="">
+                <div class="group-input">
+                  <div class="row">
+                    <div class="col-md-2 mr-md-5">
+                      <label>الاسم الاول</label>
+                      <input class="form-control checkName " type="text" id="PersonalInfo_FirstName" name="PersonalInfo.FirstName" onkeydown="checkName($(this))" value="" aria-invalid="false">
+                      <label id="PersonalInfo_FirstName-error" class="error" for="PersonalInfo_FirstName" style="display: none;"></label>
+                    </div>
+                    <div class="col-md-2 mr-md-4">
+                      <label for="input2">اسم الاب</label>
+                      <input class="form-control" type="text" id="SecondName" name="SecondName" value>
+                    </div>
+                    <div class="col-md-2 mr-md-4">
+                      <label for="input3">اسم الجد</label>
+                      <input class="form-control" type="text" id="ThirdName" name="ThirdName" value>
+                    </div>
+                    <div class="col-md-2 mr-md-4">
+                      <label for="input4">الاسم الرباعي</label>
+                      <input class="form-control" type="text" id="FourthName" name="FourthName" value>
+                    </div>
+                    <div class="col-md-2 mr-md-4">
+                      <label class="control-label">اللقب</label>
+                      <input class="form-control" type="text" id="SureName" name="SureName" value>
+                    </div>
+                  </div>
+                  <div class="mt-md-3"></div>
+                  <div class="row">
+                    <div class="col-md-2 mr-md-5">
+                      <label>تاريخ الولادة</label>
+                      <input class="form-control datetime birthdate" type="text" name="info.Birthdate"
+                        id="info-Birthdate" placeholder="____/__/__" onkeyup="maxDate($(this))">
+                      <span class="maxdate" style="color:  #a94442;font-size: 12px"></span>
+                    </div>
+                    <div class="col-md-2 mr-md-4">
+                      <label for="input7">محل الولادة</label>
+                      <input class="form-control" type="text" id="input7">
+                    </div>
+                    <div class="col-md-2 mr-md-4">
+                      <label for="input8">اسم الام الاول</label>
+                      <input class="form-control" type="text" id="PersonalInfo.MotherFirstName" name="MotherFirstName">
+                    </div>
+                    <div class="col-md-2 mr-md-4">
+                      <label for="input9">اسم اب الام </label>
+                      <input class="form-control" type="text" id="PersonalInfo.MothersecondtName"
+                        name="MothersecondtName">
+                    </div>
+                    <div class="col-md-2 mr-md-4">
+                      <label for="input10">اسم جد الام</label>
+                      <input class="form-control" type="text" id="PersonalInfo_MotherThirdName" name="MotherThirdName">
+                    </div>
+                  </div>
+                  <div class="mt-md-3"></div>
+                  <div class="row">
+                    <div class="col-md-2 mr-md-5 ">
+                      <label for="input11"> الجنس</label>
+                      <select class="form-control">
+                        <option value="">ذكر</option>
+                        <option value="">انتثى</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2 mr-md-4 ">
+                      <label for="input12"> الحالة الزوجية</label>
+                      <select class="form-control status" id="statusMar">
+                        <option value="0">اعزب</option>
+                        <option value="1">متزوج</option>
+                        <option value="2">ارمل</option>
+                        <option value="3">مطلق</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2 mr-md-4 ">
+                      <label for="input13"> الهوية التعريفية</label>
+                      <select class="form-control" id="identifySr">
+                        <option value="0">هوية الاحوال المدنية</option>
+                        <option value="1">البطاقة الوطنية</option>
+                        <option value="2">جنسيات اخرى</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2 mr-md-4">
+                      <label for="input14">وثيقة الاقامة</label>
+                      <input class="form-control" type="text" name="PersonalInfo.Nationa" id="input14">
+                    </div>
+                    <div class="col-md-2 mr-md-4 ">
+                      <label for="input15">الرقم الوطني الموحد</label>
+                      <input class="form-control number " type="text" name="PersonalInfo.NationalNo" id="input19">
+                    </div>
+                  </div>
+                  <div class="mt-md-3"> </div>
+                  <div class="row">
+                    <div class="col-md-2 mr-md-5 ">
+                      <label for="input16">رقم هوية الاحوال</label>
+                      <input class="form-control number" type="text" name="PersonalInfo.IdentifyNo" id="input20">
+                    </div>
+                    <div class="col-md-2 mr-md-4">
+                      <label for="input17">السجل لهوية الاحوال</label>
+                      <input class="form-control number" type="text" name="PersonalInfo.IdentifyRecord" id="input21">
+                    </div>
+                    <div class="col-md-2 mr-md-4">
+                      <label for="input18">الصحيفة لهوية الاحوال </label>
+                      <input class="form-control number" type="text" name="PersonalInfo.IdentifyPage" id="input22">
+                    </div>
+                    <div class="col-md-2  mr-md-4">
+                      <label for="input19">اسم دائرة الاحوال </label>
+                      <input class="form-control IdentifyName" type="text" name="PersonalInfo.IdentifyName"
+                        id="PersonalInfo-IdentifyName">
+                    </div>
+                    <div class="col-md-2  mr-md-4">
+                      <label for="input20"> محافظة السكن</label>
+                      <select class="form-control" id="input20">
+                        <option value="">بغداد</option>
+                        <option value="">بابل</option>
+                        <option value="">البصرة</option>
+                        <option value="">المثنى</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mt-md-3"> </div>
+                  <div class="row">
+                    <div class="col-md-2 mr-md-5">
+                      <label for="input21">القضاء </label>
+                      <input class="form-control" type="text" name="Town" id="input76">
+                    </div>
+                    <div class="col-md-2 mr-md-4 ">
+                      <label for="input22">الناحية </label>
+                      <input class="form-control" type="text" name="Area" id="input22">
+                    </div>
+                    <div class="col-md-2 mr-md-4 ">
+                      <label for="input768">الحي </label>
+                      <input class="form-control" type="text" name="Street" id="input50">
+                    </div>
+                    <div class="col-md-2 mr-md-4 ">
+                      <label for="input24">المحلة </label>
+                      <input class="form-control" type="text" name="Village" id="input24">
+                    </div>
+                    <div class="col-md-2 mr-md-4 ">
+                      <label for="input25">الزقاق </label>
+                      <input class="form-control" type="text" name="Alley" id="input25">
+                    </div>
+                  </div>
+                  <div class="mt-md-3"></div>
+                  <div class="row">
+                    <div class="col-md-2  mr-md-5">
+                      <label for="input21">البريد الالكتروني </label>
+                      <input class="form-control" type="text" name="PersonalInfo.Email">
+                    </div>
+                    <div class="col-md-2 mr-md-4 ">
+                      <label for="input27">اقرب نقطة دالة </label>
+                      <input class="form-control" type="text" id="input27">
+                    </div>
+                    <div class="col-md-2 mr-md-4 ">
+                      <label for="input28">رقم الموبايل الشخصي </label>
+                      <input class="form-control number" type="text" name="PersonalInfo.MobileNo" id="input28">
+                    </div>
+                    <div class="col-md-2 mr-md-4 ">
+                      <label for="input26">رقم الدار </label>
+                      <input class="form-control number" type="text" id="input26">
+                    </div>
+                  </div>
+              </form>
+              <div class="mt-md-4"></div>
+              <div class="title ">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>قائمة العائلة</h3>
+                    <button id="AddFamily" class="btn pull-right btn-success waves-orange btn-title" type="button">اضافة
+                      عائلة<span><i class="fas fa-user-plus"></i></span></button>
+                    <!-- <div class="addFamily"> -->
+                    <!-- <div class="row">
+                 <div class="col-md-12 "></div> -->
+                    <table class="table table-hover table-bordered tbl-family">
+                      <thead class="headTable">
+                        <tr class="text-align-center font-bold">
+                          <th>#</th>
+                          <th>الاسم الثلاثي</th>
+                          <th>الجنس</th>
+                          <th>صلة القرابة</th>
+                          <th>تاريخ الميلاد</th>
+                          <th>المهنة</th>
+                          <th>الرقم التقاعدي</th>
+                          <th>حذف</th>
+                        </tr>
+                      </thead>
+                      <tbody id="BodyFamily">
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-md-5"></div>
+  <div class="info-emplyee">
+    <div class="form-info">
+      <div class="row">
+        <div class="col-md-1">
+          <div class="icons2">
+          </div>
+        </div>
+        <div class="mt-md-3"> </div>
+        <div class="col-md-11">
+          <div class="info">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="title-user">
+                    <h2>المعلومات الوظيفية للموظف</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-md-3"> </div>
+              <div class="group-input ">
+                <div class="row">
+                  <div class="col-md-2 mr-md-5 ">
+                    <label for="input11"> التحصيل الدراسي</label>
+                    <select class="form-control" id="">
+                      <option value="">بكلوريوس</option>
+                      <option value="">ماجستير</option>
+                      <option value="">دكتوراه</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2 mr-md-4 ">
+                    <label for="input12"> الدرجة الوظيفية</label>
+                    <select class="form-control" id="input12">
+                      <option value="">الاولى</option>
+                      <option value="">الثانية</option>
+                      <option value="">الثالثة</option>
+                      <option value="">الرابعة</option>
+                      <option value="">الخامسة</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2 mr-md-4 ">
+                    <label for="input12"> المستوى ضمن الدرجة</label>
+                    <select class="form-control" id="input12">
+                      <option value="">الاولى</option>
+                      <option value="">الثانية</option>
+                      <option value="">الثالثة</option>
+                      <option value="">الرابعة</option>
+                      <option value="">الخامسة</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2 mr-md-4 ">
+                    <label for="input12"> العنوان الوظيفي الخاص</label>
+                    <select class="form-control" id="input12">
+                      <option value="">مساعد رئيس قسم</option>
+                      <option value="">رئيس قسم</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2 mr-md-4 ">
+                    <label for="input15"> الرقم الوظيفي</label>
+                    <input class="form-control number" type="text" id="input15">
+                  </div>
+                </div>
+                <div class="mt-md-3"> </div>
+                <div class="row">
+                  <div class="col-md-2 mr-md-5 ">
+                    <label for="input16">نسبة العجز</label>
+                    <input class="form-control" type="number" id="input16">
+                  </div>
+                  <div class="col-md-2 mr-md-4 ">
+                    <label for="input16">الراتب الاسمي الاخير</label>
+                    <input class="form-control" type="number" id="input16">
+                  </div>
+                  <div class="col-md-2 mr-md-4">
+                    <label for="input6"> تاريخ اخر علاوة</label>
+                    <input class="form-control datetime lastdate" type="text" name="JobInfo.LastBonusDate"
+                      id="JobInfo-LastBonusDate" onkeyup="lastdate($(this))">
+                    <span class="maxdate" style="color:  #a94442;font-size:12px"></span>
+                  </div>
+                  <div class="col-md-2 mr-md-4 ">
+                    <label>رقم قرار تثبيت العمر</label>
+                    <input class="form-control number" type="text" name="JobInfo.AgeDecisionNo">
+                  </div>
+                  <div class="col-md-2 mr-md-4">
+                    <label for="input6">تاريخ قرار تثبيت العمر </label>
+                    <input class="form-control" type="date" id="input6">
+                  </div>
+                </div>
+                <div class="mt-md-3"> </div>
+                <div class="row">
+                  <div class="col-md-2 mr-md-5 ">
+                    <label>الموظف متقاعد سابقا </label>
+                    <div class="form-control mt-md-4">
+                      <label class="radio-inline ml-md-2"><input type="radio" value="0" name="optradio"
+                          id="rdio1">نعم</label>
+                      <label class="radio-inline mr-md-2"><input type="radio" value="1" name="optradio"
+                          id="rdio2">كلا</label>
+                    </div>
+                  </div>
+                  <div class="col-md-2 mr-md-4 ">
+                    <label for="input16">الرقم التقاعدي</label>
+                    <input class="form-control number OldPensionNo" type="text" readonly name="RetireInfo.OldPensionNo"
+                      id="rdio2">
+                  </div>
+                  <div class="col-md-3 mr-md-4 ">
+                    <label for="input12"> سبب الحالة</label>
+                    <select class="form-control" id="input12">
+                      <option value="">اكثر من 25 سنة</option>
+                      <option value="">اقل من 25 سنة</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2 mr-md-4 ">
+                    <label for="input12"> هل المتقاعد متوفي</label>
+                    <select class="form-control" id="input12">
+                      <option value="0">غير متوفي</option>
+                      <option value="1">متوفي</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mt-md-4"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-md-5"></div>
+
+  <div class="info-emplyee">
+    <div class="form-info">
+        <div class="row">
+          <div class="col-md-1">
+            <div class="icons3">
+        </div>
+        </div> 
+            <div class="mt-md-3"> </div>
+        <div class="col-md-11">
+          <div class="info">
+          <div class="container-fluid">
+          
+            <div class="row">
+              <div class="col-md-12">
+                <div class="title-user">
+                  <h2>معلومات دائرة الموظف</h2>
+                </div>
+                
+              </div>
+            </div>
+              <div class="mt-md-3"> </div>
+
+                <div class="group-input ">   
+  <div class="row">
+        <div class="col-md-4 mr-md-5 "> 
+          <label for="input11"> الوزارة</label>
+          <select class="form-control" id="">
+            <option value="">وزارة النفط</option>
+            <option value="">وزارة الكهرباء</option>
+            <option value="">وزارة المالية</option>
+          </select>
+      
+        </div>
+    
+        <div class="col-md-3 mr-md-4 ">
+          <label for="input12"> المديرية</label>
+          <select class="form-control" id="input12">
+            <option value="">مديرية الكرخ</option>
+            <option value="">مديرية الرصافة</option>
+            <option value="">مديرية بابل</option>
+              
+          </select>
+      
+        </div>
+        
+      <div class="col-md-3 mr-md-4 ">
+          <label for="input12">الدائرة</label>
+          <select class="form-control" id="input12">
+            <option value="">دائرة صحة بابل</option>
+            <option value=""> دائرة بريد الكرخ</option>
+          </select>
+      
+        </div>
+        
+      </div>
+      <div class="mt-md-3"> </div>
+      <div class="row">
+        
+      <div class="col-md-3 mr-md-5 ">
+          <label for="input12">المحافظة التي تقع بها الدائرة</label>
+          <select class="form-control" id="input12">
+            <option value="">دائرة صحة بابل</option>
+            <option value=""> دائرة بريد الكرخ</option>
+          </select>
+      
+        </div>
+    
+      <div class="col-md-3 mr-md-4 "> 
+          <label for="input16" >رقم هاتف الدائرة</label>
+          <input class="form-control" type="number" id="input16">
+      
+        </div>
+      
+        <div class="col-md-3 mr-md-4" >
+                  <label for="input6" >البريد  الالكتروني للدائرة</label>
+                  <input  class="form-control" type="email" name="input6">
+                  
+                    </div>
+      
+      </div>
+      <div class="mt-md-3"> </div>
+        <div class="mt-md-4"> </div>
+                <!-- </div> -->
+                </div>
+            <!-- end input-group -->
+          </div> 
+          <!-- end class info -->
+          </div>
+            <!-- <div class="container"> -->
+
+        </div>
+        </div>
+        </div>
+  </div>
+      <template id="FamilyTemp">
+        <tr>
+          <td class="idx">{{greeting}}</td>
+});
+          <td><input type="text" class="form-control familyName error" onkeyup="checkName($(this))" id="PersonalInfo_Families_0__FullName" name="PersonalInfo.Families[0].FullName" value="" aria-invalid="false">
+            <label id="PersonalInfo_Families_0__FullName-error" class="error" for="PersonalInfo_Families_0__FullName" style="display: none;"></label></td>
+          <td> <select class="form-control" id="input12">
+            <option value="">ذكر</option>
+            <option value="">انتثى</option>
+           
+          </select></td>
+
+
+          <td><select class="form-control" id="input12">
+                      <option value="">الاولى</option>
+                      <option value="">الثانية</option>
+                      <option value="">الثالثة</option>
+                      <option value="">الرابعة</option>
+                      <option value="">الخامسة</option>
+                    </select> </td>
+
+          <td>
+            <input class="form-control datetime lastdate" type="text" name="info.Birthdate"
+            id="JobInfo-LastBonusDate" onkeyup="maxDate($(this))">
+            <span class="maxdate" style="color:  #a94442;font-size:12px"></span>
+          </td>
+          <td><select class="form-control" name="subTitle" id="subTitle">
+           
+            <option value="0">طبيب اطفال</option>
+            <option value="1">مهندس</option>
+            <option value="2">طيار</option>
+            <option value="3">متقاعد</option>
+          </select> </td>
+
+          <td><input class="form-control familyPensionNo" type="text" name="numberperso" id="numberperso" placeholder="الرقم التقاعدي"></td>
+          <td>
+            <button class="btn btn-block del" onclick="deleteRow($(this))" id="deleteBtn" data-id="0">حذف</button>
+          </td>
+        </tr>
+      </template>
+    </div>
+   
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/app.js"> </script>
+    <script src="js/mask.js"></script>
+</body>
+</html>
